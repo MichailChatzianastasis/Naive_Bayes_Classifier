@@ -3,7 +3,8 @@
 <h2>Using cross validation to optimize models</h2>
   
 <h2>Overview</h2>
-  The database contains Movies, derived from the MovieLens dataset. This dataset includes information for about 10,000 movies, including     the IMDB id for each movie. At first we download Rotten Tomatoes reviews from 3000 of these movies, using the Rotten Tomatoes API      (Application Programming Interface). After that,we use a Naive Bayes classifier to build a prediction model for whether a review is fresh  or rotten, depending on the text of the review.
+  We’ll be working with a CSV file containing movie reviews. Each row contains the text of the review, as well as a number indicating   whether the tone of the review is positive(1) or negative(-1).
+We want to predict whether a review is negative or positive, based on the text alone. To do this, we’ll train an algorithm using the reviews and classifications in train.csv, and then make predictions on the reviews in test.csv. We’ll be able to calculate our error using the actual classifications in test.csv to see how good our predictions were.
   
 <h3>Useful libraries for this project</h3>
 
@@ -11,10 +12,6 @@
 
 - scikit-learn, for machine learning
 
-- json for parsing JSON data from the web.
-
 - pandas, for data frames
 
 - matplotlib, for plotting
-
-- requests, for downloading web content
